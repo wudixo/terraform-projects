@@ -22,6 +22,6 @@ resource "aws_instance" "web_instance" {
   EOF
 
   tags = {
-    "Name" : "Ashok IT - Server"
+    "Name" : "Wudixo - Server"
   }
 }
