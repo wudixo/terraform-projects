@@ -10,5 +10,5 @@ variable "instance_type"{
 
 variable "key_pair_name"{
    description="Amazon Key Pair Name"
-   default = "ashokitkeypair"
+   default = "999"
 }
