@@ -33,8 +33,8 @@ resource "aws_vpc" "wudixovpc" {
  }
 }
 
-resource "aws_security_group" "wudixosg" {
- name = "wudixosg"
+resource "aws_security_group" "OGsg" {
+ name = "OGsg"
  description = "This firewall allows SSH, HTTP and MYSQL"
  vpc_id = "${aws_vpc.wudixovpc.id}"
  
@@ -129,7 +129,7 @@ resource "aws_instance" "myserver" {
  ami = "ami-02a2af70a66af6dfb"
  instance_type = "t2.micro"
  key_name = "${aws_key_pair.generated_key.key_name}"
- vpc_security_group_ids = [ "${aws_security_group.wudixosg.id}" ]
+ vpc_security_group_ids = [ "${aws_security_group.OGsg.id}" ]
  subnet_id = "${aws_subnet.public.id}"
  
  tags = {
